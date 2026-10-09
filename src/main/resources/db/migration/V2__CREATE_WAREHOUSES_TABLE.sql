@@ -1,0 +1,7 @@
+CREATE TABLE warehouses
+(
+    id   UUID PRIMARY KEY DEFAULT GEN_RANDOM_UUID(),
+
+    code VARCHAR(50) NOT NULL UNIQUE CHECK (code = UPPER(code)),
+    alias VARCHAR(50)
+);
